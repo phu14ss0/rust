@@ -1,4 +1,4 @@
-use std::io;
+use std::io; // input/output 라이브러리를 스코프로 가져옴
 
 fn main() {
     println!("Guess the number!");
