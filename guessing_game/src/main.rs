@@ -1,4 +1,4 @@
-use std::io; // input/output 라이브러리를 스코프로 가져옴
+use std::io; // input/output 라이브러리를 스코프로 가져옴 11
 
 fn main() {
     println!("Guess the number!");  // 문자열을 화면에 표시하는 매크로
