@@ -17,4 +17,7 @@ fn main() {
     
     // {}는 변경자로 값이 표시되는 위치를 나타냄(python format과 비슷)
     println!("You guessed: {}", guess);
+
+    // Crate(크레이트) : 코드의 묶음(package), ex) rand 크레이트 : 다른 프로그램에서 사용하기 위한 library 크레이트
+    // Cargo.toml 파일에 사용할 크레이트를 의존 리스트에 추가해야 사용 가능
 }
