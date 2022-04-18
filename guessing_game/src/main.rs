@@ -11,7 +11,7 @@ fn main() {
                                                                 // gen_range는 Rng trait에 정의된 두 숫자 사이의 임의 값을 생성하는 메소드
     println!("The secret number is: {}", secret_number);
 
-    loop {
+    loop {  // loop 키워드로 무한 반복 제공
         println!("Please input your guess.");
 
         // 러스트 변수는 기본적으로 불변, 가변 변수는 앞에 mut을 붙임
@@ -42,7 +42,7 @@ fn main() {
             Ordering::Greater => println!("Too big"),
             Ordering::Equal => {
                 println!("You win!");
-                break;
+                break;      // 정답을 맞췄
             }
         }
     }
