@@ -42,7 +42,7 @@ fn main() {
             Ordering::Greater => println!("Too big"),
             Ordering::Equal => {
                 println!("You win!");
-                break;      // 정답을 맞췄
+                break;      // 정답을 맞추면 반복 종료
             }
         }
     }
