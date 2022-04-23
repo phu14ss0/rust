@@ -9,7 +9,7 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1, 101);   // thread_rng() 함수는 OS가 시드를 정하고 현재 스레드에서만 사용되는 정수 생성기를 돌려줌
                                                                 // gen_range는 Rng trait에 정의된 두 숫자 사이의 임의 값을 생성하는 메소드
-    println!("The secret number is: {}", secret_number);
+    // println!("The secret number is: {}", secret_number);
 
     loop {  // loop 키워드로 무한 반복 제공
         println!("Please input your guess.");
@@ -25,10 +25,12 @@ fn main() {
         io::stdin().read_line(&mut guess)
             .expect("Failed to read line");
 
-        let guess: u32 = guess.trim().parse()   // 정수형 u32로 guess 변수를 재사용함
-                                                // parse()메소드는 문자열을 숫자형으로 파싱함
-            .expect("Please type a number!");
-        
+        // 숫자가 아닌 입력 값들에 대한 처리
+        let guess: u32 = match guess.trim().parse(){    // 정수형 u32로 guess 변수를 재사용함, parse()메소드는 문자열을 숫자형으로 파싱함
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
         // {}는 변경자로 값이 표시되는 위치를 나타냄(python format과 비슷)
         println!("You guessed: {}", guess);
 
